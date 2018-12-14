@@ -1,0 +1,154 @@
+
+							ANGULAR JS
+
+
+Angular 1.x is a JAva Script implementation.It is from google.It is from ECMA SCRIPT 5.JAVA SCRIPT is Object Based Programming Language
+
+Angular 2/4/5/6/7 is a Type Script Implementation.It is from Microsoft.It is from ECMA SCRIPT 6
+
+
+Object based programming language means user defined objects are not created only pre defined objects can be used
+
+
+Object Orieneted programming language means user defined objects are  created along with pre defined objects
+
+To work with Angular we need node.js,npm,Visual Studio,Angular CLI
+
+Angular has a testing tool called PROTRACTOR AND KARMA
+
+
+Angular Execution flow
+
+Main.ts-->index.html-->app.module.ts-->app.component.ts-->component.html
+
+Angular has a feature called Single Based Application(Accessing the code through single page).
+
+The server for angular is Web Pack Development Server
+
+
+1)What is a web pack?
+-->Web pack is a module bundler
+-->creates a js bundle and makes this bundle available to browser
+-->has a internal server called Web Pack Development Server.
+-->this webpack has a feature called live watching mechanism.
+-->watches our application and apply changes if any in the UI.
+-->It has an inbuitlt tool called Grunt to watch live mechanism  
+
+
+Component
+---------
+
+
+-->it is a type script class
+-->Angular application is a tree of components
+-->component is an heart of angular application
+-->will be defined by a decorator called @Component
+
+ng generate component component name
+
+
+
+Template
+--------
+
+-->Inline Template
+
+   ng g c product --inline-template
+   uses backticks which allows us to add single 
+-->external Template
+
+
+Template Binding
+-----------------
+
+1)interpolation:
+{{}}
+it is one way data binding
+
+2)property binding:
+[ ]
+it is a one way data binding
+
+3)event binding:
+( )
+it is a one way data binding
+
+4)two way data binding
+[(  )]
+-ngModel
+-[(ngModel)]
+
+
+
+Directives
+-------------
+1)component directives
+
+2)structural directives
+  *ngFor, *ngIf, *ngSwitch
+   -adding an element to dom or removes an element from dom 
+   -changes structure of dom
+
+3)attribute directives
+  -ngclass,ngStyle,ngModel, ngNonBindable
+  -changes behaviour of the element
+
+In Built pipes
+---------------
+1)lowercase
+      {{ 'CAPGEMINI' | lowercase }} //output : capgemini
+2) uppercase
+     {{ 'capgemini' | uppercase }}  //output : CAPGEMINI
+3) currency
+     {{ 1234.56 | currency: 'USD' }}  //output : $1234.56
+4) date:
+    data has a different arguments:
+    -yyyy -4 digit year
+    -yy   -2 digit year
+    -MMM  -Month name
+    -MM   -month in digit
+    -DD   -date
+    -EEE  -first 3 letters in week day
+    -EEEE -full name
+    -hh   -12 hours format
+    -mm   -minutes
+    -ss   -seconds
+    -HH   -24 hours format
+    -a    -AM/PM
+    -z    -zone
+
+    1)how to use date format?
+    A){{ d | date : 'EEEE dd-MM-yyyy' }}  // Thursday 6-12-2018
+
+5)number
+  {{ 4200.156 | number: '4.1-3' }}      //4200.156
+  {{ 4200.156 | number: '4.1-2' }}      //4200.16
+  {{ 4200.156 | number: '5.1-3' }}      //04200.156
+
+6)percent
+  {{ 1 | percent }}  //100%
+  {{ 2  | percent }} //200%
+  {{ .25 | percent }} //25%
+
+7) slice
+    {{ [ 'a','e','i','o','u'] | slice:2 }} //i,o,u 
+    {{ [ 'a','e','i','o','u'] | slice:1: 3 }} //e,i
+
+1)how to create  custom pipe?
+A)ng generate  pipe mysort
+ custom pipe internally invokes transform
+
+
+Routing
+--------
+router-outlet is a in built angular component
+
+predefined properties for validations in Angular JS
+----------------------------------------------------
+1) valid
+
+2)touched
+ 
+3)dirty
+
+4)invalid
